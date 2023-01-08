@@ -51,15 +51,11 @@ export function SignUp() {
               placeholder="E-mail"
               keyboardType="email-address"
               autoCapitalize="none"
-              inputIcon="email"
+              inputIcon="mail"
             />
 
-            <Input placeholder="Senha" secureTextEntry inputIcon="lock" />
-            <Input
-              placeholder="Confirme a senha"
-              secureTextEntry
-              inputIcon="lock"
-            />
+            <Input placeholder="Senha" hasShowPassword />
+            <Input placeholder="Confirme a senha" hasShowPassword />
 
             <Button title="Criar e acessar" mt={1} />
 
