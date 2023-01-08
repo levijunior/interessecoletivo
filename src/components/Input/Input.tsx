@@ -8,7 +8,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 
 type Props = IInputProps & {
   errorMessage?: string | null
-  inputIcon?: 'person'
+  inputIcon?: 'email' | 'person' | 'lock'
 }
 
 export function Input({
@@ -24,7 +24,7 @@ export function Input({
       <NativeBaseInput
         bg="white"
         h={12}
-        px={4}
+        px={3}
         borderWidth={1}
         borderColor="gray.600"
         fontSize="md"
@@ -44,7 +44,7 @@ export function Input({
             <Icon
               as={<MaterialIcons name={inputIcon} />}
               size={5}
-              ml="2"
+              ml={3}
               color="muted.400"
             />
           ) : undefined

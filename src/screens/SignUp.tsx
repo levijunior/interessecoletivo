@@ -45,16 +45,21 @@ export function SignUp() {
               </Text>
             </Center>
 
-            <Input placeholder="Nome" />
+            <Input placeholder="Nome" inputIcon="person" />
 
             <Input
               placeholder="E-mail"
               keyboardType="email-address"
               autoCapitalize="none"
+              inputIcon="email"
             />
 
-            <Input placeholder="Senha" secureTextEntry />
-            <Input placeholder="Confirme a senha" secureTextEntry />
+            <Input placeholder="Senha" secureTextEntry inputIcon="lock" />
+            <Input
+              placeholder="Confirme a senha"
+              secureTextEntry
+              inputIcon="lock"
+            />
 
             <Button title="Criar e acessar" mt={1} />
 

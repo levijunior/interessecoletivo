@@ -49,8 +49,9 @@ export function SignIn() {
               placeholder="E-mail"
               keyboardType="email-address"
               autoCapitalize="none"
+              inputIcon="email"
             />
-            <Input placeholder="Senha" secureTextEntry />
+            <Input placeholder="Senha" inputIcon="lock" secureTextEntry />
 
             <Button title="Acessar" mt={1} />
 
