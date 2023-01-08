@@ -61,7 +61,7 @@ export function SignIn() {
               </Text>
 
               <Button
-                title="Criar Conta"
+                title="Criar conta"
                 variant="outline"
                 onPress={() => navigation.navigate('signUp')}
               />

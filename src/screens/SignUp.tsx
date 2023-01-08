@@ -55,7 +55,6 @@ export function SignUp() {
             />
 
             <Input placeholder="Senha" hasShowPassword />
-            <Input placeholder="Confirme a senha" hasShowPassword />
 
             <Button title="Criar e acessar" mt={1} />
 
@@ -63,7 +62,7 @@ export function SignUp() {
               title="Voltar para o login"
               variant="outline"
               onPress={() => navigation.navigate('signIn')}
-              mt={8}
+              mt={20}
               mb={3}
             />
           </Box>

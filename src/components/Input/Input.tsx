@@ -36,7 +36,7 @@ export function Input({
         fontFamily="body"
         placeholderTextColor="gray.600"
         isInvalid={invalid}
-        type={show ? 'text' : 'password'}
+        type={hasShowPassword && !show ? 'password' : 'text'}
         _invalid={{
           borderColor: 'red.500',
         }}
