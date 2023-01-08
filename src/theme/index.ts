@@ -23,8 +23,10 @@ export const THEME = extendTheme({
   fonts: {
     heading: 'Lora_600SemiBold',
     body: 'Montserrat_400Regular',
+    500: 'Montserrat_500Medium',
   },
   sizes: {
+    11: 44,
     25: 100,
     30: 120,
   },
