@@ -9,7 +9,7 @@ export function Routes() {
   const theme = DefaultTheme
 
   return (
-    <Box flex={1} bg="white" safeArea>
+    <Box flex={1} bgColor="white" safeArea>
       <NavigationContainer theme={theme}>
         <AuthRoutes />
       </NavigationContainer>

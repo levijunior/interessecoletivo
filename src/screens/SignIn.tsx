@@ -18,10 +18,6 @@ import { Button } from '@components/Button'
 export function SignIn() {
   const navigation = useNavigation<AuthNavigatorRoutesProps>()
 
-  function handleNewAccount() {
-    navigation.navigate('signIn')
-  }
-
   return (
     <Box flex={1}>
       <VStack flex={1} bgColor="white">
@@ -35,12 +31,12 @@ export function SignIn() {
             resizeMode="cover"
           />
           <Box rounded={10} mt="-10" py={5} px={8} bgColor="white">
-            <Center mb={9}>
+            <Center mb={8}>
               <Heading
                 fontFamily="heading"
                 fontWeight="semibold"
                 fontSize="3xl"
-                mt="5"
+                mt="4"
               >
                 Interesse Coletivo
               </Heading>
@@ -56,7 +52,7 @@ export function SignIn() {
             />
             <Input placeholder="Senha" secureTextEntry />
 
-            <Button title="Acessar" mt={2} />
+            <Button title="Acessar" mt={1} />
 
             <Center mt={24}>
               <Text color="black" fontSize="sm" mb={3} fontFamily="body">
@@ -66,7 +62,7 @@ export function SignIn() {
               <Button
                 title="Criar Conta"
                 variant="outline"
-                onPress={handleNewAccount}
+                onPress={() => navigation.navigate('signUp')}
               />
             </Center>
           </Box>
