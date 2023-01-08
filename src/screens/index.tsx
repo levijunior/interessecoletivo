@@ -1,4 +1,6 @@
 import { SignIn } from './SignIn'
 import { SignUp } from './SignUp'
+import { Home } from './Home'
+import { Profile } from './Profile'
 
-export { SignIn, SignUp }
+export { SignIn, SignUp, Home, Profile }

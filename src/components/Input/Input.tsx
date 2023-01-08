@@ -28,18 +28,16 @@ export function Input({
         borderWidth={1}
         borderColor="gray.600"
         fontSize="md"
-        color="white"
+        color="black"
         fontFamily="body"
         placeholderTextColor="gray.600"
         isInvalid={invalid}
         _invalid={{
-          borderWidth: 1,
           borderColor: 'red.500',
         }}
         _focus={{
-          bgColor: 'gray.700',
-          borderWidth: 1,
-          borderColor: 'green.500',
+          bgColor: 'white',
+          borderColor: 'orange.400',
         }}
         InputLeftElement={
           inputIcon ? (

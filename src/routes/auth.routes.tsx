@@ -3,7 +3,7 @@ import {
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack'
 
-import { SignIn, SignUp } from '@screens/index'
+import { SignIn, SignUp } from '@screens'
 
 type AuthRoutes = {
   signIn: undefined

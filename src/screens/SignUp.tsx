@@ -63,6 +63,7 @@ export function SignUp() {
               variant="outline"
               onPress={() => navigation.navigate('signIn')}
               mt={8}
+              mb={3}
             />
           </Box>
         </ScrollView>
