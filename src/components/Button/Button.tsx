@@ -3,15 +3,16 @@ import { Button as ButtonNativeBase, IButtonProps, Text } from 'native-base'
 type Props = IButtonProps & {
   title: string
   variant?: 'solid' | 'outline'
+  isFull?: boolean
 }
 
-export function Button({ title, variant = 'solid', ...rest }: Props) {
+export function Button({ title, variant = 'solid', isFull, ...rest }: Props) {
   return (
     <ButtonNativeBase
-      w="full"
+      w={isFull ? 'full' : undefined}
       h={12}
       bg={variant === 'outline' ? 'transparent' : 'orange.400'}
-      borderWidth={variant === 'outline' ? 2 : 0}
+      borderWidth={2}
       borderColor="orange.400"
       rounded="sm"
       _pressed={{

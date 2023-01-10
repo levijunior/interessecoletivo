@@ -1,18 +1,18 @@
 import {
   Box,
   AspectRatio,
-  Center,
   Heading,
-  HStack,
-  Divider,
   Image,
   Text,
   FlatList,
-  Badge,
-  Pressable,
+  VStack,
 } from 'native-base'
-import { TouchableOpacity } from 'react-native'
-import { CategoryBadge } from './CategoryBadge'
+
+import {
+  ActionButtons,
+  CategoryBadge,
+  ProgressBar,
+} from '@components/ProductCard'
 
 // TODO: BE dependency: type for product data
 export function ProductCard({ data }: { data: any }) {
@@ -37,27 +37,29 @@ export function ProductCard({ data }: { data: any }) {
           roundedBottom={0}
         />
       </AspectRatio>
-      <Box py={5} px={5} rounded="lg" bgColor="white" mt="-10" mx={4}>
-        <Box mb={4}>
-          <Heading
-            fontFamily="heading"
-            fontWeight="semibold"
-            fontSize="xl"
-            numberOfLines={2}
-            mb={2}
-          >
-            Lorem ipsum dolor sit
-          </Heading>
-          <Text
-            fontSize="sm"
-            color="gray.800"
-            fontFamily="body"
-            numberOfLines={3}
-            bgColor="red"
-          >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          </Text>
-        </Box>
+
+      <VStack py={5} px={5} rounded="lg" bgColor="white" mt="-10" mx={4}>
+        <Heading
+          fontFamily="heading"
+          fontWeight="semibold"
+          fontSize="xl"
+          numberOfLines={2}
+          mb={2}
+        >
+          Lorem ipsum dolor sit
+        </Heading>
+        <Text
+          fontSize="sm"
+          color="gray.800"
+          fontFamily="body"
+          numberOfLines={3}
+          bgColor="red"
+          mb={4}
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, ipsa!
+          Neque distinctio saepe eos necessitatibus?
+        </Text>
+
         <FlatList
           data={['Bares e restaurantes']}
           keyExtractor={(item) => item}
@@ -66,12 +68,11 @@ export function ProductCard({ data }: { data: any }) {
           showsHorizontalScrollIndicator={false}
           mb={4}
         />
-        <HStack>
-          <Text>1,3k Likes</Text>
-          <Divider bg="gray.800" thickness="1" mx="4" orientation="vertical" />
-          <Text>5k meta</Text>
-        </HStack>
-      </Box>
+
+        <ProgressBar />
+
+        <ActionButtons />
+      </VStack>
     </Box>
   )
 }

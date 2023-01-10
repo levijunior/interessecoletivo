@@ -53,7 +53,7 @@ export function SignIn() {
             />
             <Input placeholder="Senha" hasShowPassword />
 
-            <Button title="Acessar" mt={1} />
+            <Button title="Acessar" mt={1} isFull />
 
             <Center mt={24}>
               <Text color="black" fontSize="sm" mb={3} fontFamily="body">
@@ -64,6 +64,7 @@ export function SignIn() {
                 title="Criar conta"
                 variant="outline"
                 onPress={() => navigation.navigate('signUp')}
+                isFull
               />
             </Center>
           </Box>

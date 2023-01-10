@@ -19,6 +19,10 @@ export const THEME = extendTheme({
       400: '#009EBA',
       800: '#003046',
     },
+    green: {
+      550: '#329F5B',
+      650: '#0C8346',
+    },
   },
   fonts: {
     heading: 'Lora_600SemiBold',

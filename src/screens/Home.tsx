@@ -1,6 +1,7 @@
 import { Header } from '@components/Header'
 import { ProductCard } from '@components/ProductCard'
-import { FlatList, VStack } from 'native-base'
+import { Center, FlatList, Icon, Text, VStack } from 'native-base'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 const MOCK_DATA = [
   {
@@ -27,6 +28,18 @@ export function Home() {
         _contentContainerStyle={{
           paddingBottom: 20,
         }}
+        ListFooterComponent={() => (
+          <Center pt={9}>
+            <Icon
+              as={MaterialCommunityIcons}
+              name="check-all"
+              color="gray.700"
+              size={8}
+              mb={2}
+            />
+            <Text>Todas as publicações foram visualizadas</Text>
+          </Center>
+        )}
       />
     </VStack>
   )

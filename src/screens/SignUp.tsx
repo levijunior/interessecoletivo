@@ -56,7 +56,7 @@ export function SignUp() {
 
             <Input placeholder="Senha" hasShowPassword />
 
-            <Button title="Criar e acessar" mt={1} />
+            <Button title="Criar e acessar" mt={1} isFull />
 
             <Button
               title="Voltar para o login"
@@ -64,6 +64,7 @@ export function SignUp() {
               onPress={() => navigation.navigate('signIn')}
               mt={20}
               mb={3}
+              isFull
             />
           </Box>
         </ScrollView>
