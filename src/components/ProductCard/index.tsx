@@ -1,3 +1,4 @@
 import { ProductCard } from './ProductCard'
+import { CategoryBadge } from './CategoryBadge'
 
-export { ProductCard }
+export { ProductCard, CategoryBadge }

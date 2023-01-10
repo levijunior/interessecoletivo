@@ -1,12 +1,12 @@
 import { TouchableOpacity } from 'react-native'
-import { Heading, HStack, Text, VStack, Icon } from 'native-base'
+import { HStack, Text, VStack, Icon } from 'native-base'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 import { UserPhoto } from './UserPhoto'
 
 export function Header() {
   return (
-    <HStack bg="gray.100" pt={8} pb={8} alignItems="center">
+    <HStack bg="gray.100" py={5} alignItems="center">
       <UserPhoto
         source={{ uri: 'https://github.com/levijunior.png' }}
         size={11}

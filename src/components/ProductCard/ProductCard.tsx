@@ -7,9 +7,14 @@ import {
   Divider,
   Image,
   Text,
+  FlatList,
+  Badge,
+  Pressable,
 } from 'native-base'
+import { TouchableOpacity } from 'react-native'
+import { CategoryBadge } from './CategoryBadge'
 
-// TODO: type for product data
+// TODO: BE dependency: type for product data
 export function ProductCard({ data }: { data: any }) {
   return (
     <Box
@@ -32,21 +37,19 @@ export function ProductCard({ data }: { data: any }) {
           roundedBottom={0}
         />
       </AspectRatio>
-      <Box py={5} px={3} rounded="lg" bgColor="white" mt="-10" mx={4}>
-        <Center mb={5}>
+      <Box py={5} px={5} rounded="lg" bgColor="white" mt="-10" mx={4}>
+        <Box mb={4}>
           <Heading
             fontFamily="heading"
             fontWeight="semibold"
             fontSize="xl"
             numberOfLines={2}
-            mb={3}
-            textAlign="center"
+            mb={2}
           >
             Lorem ipsum dolor sit
           </Heading>
           <Text
-            textAlign="center"
-            fontSize="md"
+            fontSize="sm"
             color="gray.800"
             fontFamily="body"
             numberOfLines={3}
@@ -54,8 +57,16 @@ export function ProductCard({ data }: { data: any }) {
           >
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           </Text>
-        </Center>
-        <HStack justifyContent="center">
+        </Box>
+        <FlatList
+          data={['Bares e restaurantes']}
+          keyExtractor={(item) => item}
+          renderItem={({ item }) => <CategoryBadge category={item} />}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          mb={4}
+        />
+        <HStack>
           <Text>1,3k Likes</Text>
           <Divider bg="gray.800" thickness="1" mx="4" orientation="vertical" />
           <Text>5k meta</Text>

@@ -1,17 +1,6 @@
 import { Header } from '@components/Header'
 import { ProductCard } from '@components/ProductCard'
-import {
-  AspectRatio,
-  Box,
-  Center,
-  Divider,
-  FlatList,
-  Heading,
-  HStack,
-  Image,
-  Text,
-  VStack,
-} from 'native-base'
+import { FlatList, VStack } from 'native-base'
 
 const MOCK_DATA = [
   {
