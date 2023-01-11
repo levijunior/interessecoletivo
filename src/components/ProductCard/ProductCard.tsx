@@ -8,11 +8,9 @@ import {
   VStack,
 } from 'native-base'
 
-import {
-  ActionButtons,
-  CategoryBadge,
-  ProgressBar,
-} from '@components/ProductCard'
+import { ActionButtons } from './ActionButtons'
+import { CategoryBadge } from './CategoryBadge'
+import { ProgressBar } from './ProgressBar'
 
 // TODO: BE dependency: type for product data
 export function ProductCard({ data }: { data: any }) {
