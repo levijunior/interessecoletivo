@@ -9,6 +9,7 @@ import {
 } from 'native-base'
 
 import { ActionButtons } from './ActionButtons'
+import { AvatarName } from './AvatarName'
 import { CategoryBadge } from './CategoryBadge'
 import { ProgressBar } from './ProgressBar'
 
@@ -37,6 +38,8 @@ export function ProductCard({ data }: { data: any }) {
       </AspectRatio>
 
       <VStack py={5} px={5} rounded="lg" bgColor="white" mt="-10" mx={4}>
+        <AvatarName />
+
         <Heading
           fontFamily="heading"
           fontWeight="semibold"

@@ -1,4 +1,4 @@
-import { Image, IImageProps } from 'native-base'
+import { IImageProps, Avatar } from 'native-base'
 
 type Props = IImageProps & {
   size: number
@@ -6,11 +6,11 @@ type Props = IImageProps & {
 
 export function UserPhoto({ size, ...rest }: Props) {
   return (
-    <Image
+    <Avatar
       w={size}
       h={size}
       rounded="full"
-      borderWidth={2}
+      borderWidth={1}
       borderColor="gray.400"
       {...rest}
     />
