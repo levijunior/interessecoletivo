@@ -1,16 +1,9 @@
-import {
-  Box,
-  AspectRatio,
-  Heading,
-  Image,
-  Text,
-  FlatList,
-  VStack,
-} from 'native-base'
+import { Box, Heading, Text, FlatList, VStack } from 'native-base'
 
 import { ActionButtons } from './ActionButtons'
 import { AvatarName } from './AvatarName'
 import { CategoryBadge } from './CategoryBadge'
+import { ProductImage } from './ProductImage'
 import { ProgressBar } from './ProgressBar'
 
 // TODO: BE dependency: type for product data
@@ -24,18 +17,7 @@ export function ProductCard({ data }: { data: any }) {
       borderColor="gray.400"
       mb={8}
     >
-      <AspectRatio w="100%" ratio={4 / 4}>
-        <Image
-          w="full"
-          source={{
-            uri: data.url,
-          }}
-          alt="Product Image"
-          resizeMode="cover"
-          roundedTop="lg"
-          roundedBottom={0}
-        />
-      </AspectRatio>
+      <ProductImage url={data.url} />
 
       <VStack py={5} px={5} rounded="lg" bgColor="white" mt="-10" mx={4}>
         <AvatarName />

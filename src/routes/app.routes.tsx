@@ -7,15 +7,12 @@ import {
 
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
-import { Home } from '@screens/Home'
-import { Profile } from '@screens/Profile'
+import { Details, Home } from '@screens'
 import { StatusBar } from 'expo-status-bar'
 
 type AppRoutes = {
   home: undefined
-  exercise: undefined
-  profile: undefined
-  history: undefined
+  details: undefined
 }
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>
@@ -61,18 +58,9 @@ export function AppRoutes() {
         />
 
         <Screen
-          name="profile"
-          component={Profile}
-          options={{
-            tabBarIcon: ({ color, focused }) => (
-              <Icon
-                as={MaterialCommunityIcons}
-                name={focused ? 'account' : 'account-outline'}
-                color={color}
-                size={iconSize}
-              />
-            ),
-          }}
+          name="details"
+          component={Details}
+          options={{ tabBarButton: () => null }}
         />
       </Navigator>
     </>

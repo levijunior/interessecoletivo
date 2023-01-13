@@ -1,12 +1,20 @@
+import { useNavigation } from '@react-navigation/native'
+import { AppNavigatorRoutesProps } from '@routes/app.routes'
+
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { HStack, Box, IconButton } from 'native-base'
 import { Button } from '@components/Button'
 
 export function ActionButtons() {
+  const navigation = useNavigation<AppNavigatorRoutesProps>()
+
   return (
     <HStack mt={6}>
       <Box flex={1}>
-        <Button title="Saber mais" />
+        <Button
+          title="Saiba mais"
+          onPress={() => navigation.navigate('details')}
+        />
       </Box>
       <IconButton
         _icon={{

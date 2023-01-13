@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native'
 import {
   VStack,
   Image,
@@ -8,6 +7,8 @@ import {
   Text,
   Center,
 } from 'native-base'
+
+import { useNavigation } from '@react-navigation/native'
 
 import { AuthNavigatorRoutesProps } from '@routes/auth.routes'
 

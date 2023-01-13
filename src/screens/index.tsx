@@ -1,6 +1,5 @@
-import { SignIn } from './SignIn'
-import { SignUp } from './SignUp'
-import { Home } from './Home'
-import { Profile } from './Profile'
-
-export { SignIn, SignUp, Home, Profile }
+export { SignIn } from './SignIn'
+export { SignUp } from './SignUp'
+export { Home } from './Home'
+export { Profile } from './Profile'
+export { Details } from './Details'

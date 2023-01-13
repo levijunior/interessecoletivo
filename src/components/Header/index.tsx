@@ -1,4 +1,2 @@
-import { Header } from './Header'
-import { UserPhoto } from './UserPhoto'
-
-export { Header, UserPhoto }
+export { Header } from './Header'
+export { UserPhoto } from './UserPhoto'
