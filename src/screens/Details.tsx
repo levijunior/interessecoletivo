@@ -4,6 +4,8 @@ import { ProductImage } from '@components/ProductCard/ProductImage'
 import { AvatarName } from '@components/ProductCard'
 import { Header } from '@components/Header'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { AppNavigatorRoutesProps } from '@routes/app.routes'
+import { Button } from '@components/Button'
 
 export function Details() {
   const navigation = useNavigation()
@@ -14,26 +16,23 @@ export function Details() {
         <Header />
       </Box>
       <Box position="relative">
-        <Pressable
+        <IconButton
+          onPress={() => navigation.goBack()}
+          _icon={{
+            as: MaterialCommunityIcons,
+            name: 'chevron-left',
+            size: 8,
+            color: 'black',
+          }}
+          size={12}
           m={4}
           position="absolute"
           zIndex={1}
-          opacity={0.8}
-          onPress={() => navigation.goBack()}
-          size={12}
           bgColor="white"
           rounded="full"
-        >
-          <IconButton
-            _icon={{
-              as: MaterialCommunityIcons,
-              name: 'chevron-left',
-              size: 8,
-              color: 'black',
-            }}
-            size={12}
-          />
-        </Pressable>
+          opacity={0.75}
+          _pressed={{ opacity: 1 }}
+        />
         <ProductImage
           url="https://images.pexels.com/photos/14853728/pexels-photo-14853728.jpeg"
           imageProps={{ roundedTop: 0 }}
