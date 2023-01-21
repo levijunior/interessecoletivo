@@ -22,6 +22,9 @@ export function ActionButtons() {
           name: 'plus-thick',
           color: 'orange.400',
         }}
+        _pressed={{
+          bgColor: 'orange.100',
+        }}
         variant="outline"
         onPress={() => null}
         borderWidth={2}

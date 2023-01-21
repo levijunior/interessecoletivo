@@ -12,7 +12,7 @@ export function CategoryBadge({ category }: Props) {
       mr={3}
       onPress={() => null}
       _pressed={{
-        opacity: 0.8,
+        opacity: 80,
       }}
     >
       <Badge

@@ -1,4 +1,5 @@
-import { Box, Heading, Text, FlatList, VStack } from 'native-base'
+import { Box, Heading, Text, FlatList, VStack, Icon, HStack } from 'native-base'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 import { ActionButtons } from './ActionButtons'
 import { AvatarName } from './AvatarName'
@@ -53,6 +54,17 @@ export function ProductCard({ data }: { data: any }) {
         />
 
         <ProgressBar />
+
+        <HStack mt={2} alignItems="center">
+          <Icon
+            as={MaterialCommunityIcons}
+            name="clock-outline"
+            color="orange.400"
+            size={4}
+            mr={1}
+          />
+          <Text fontSize="xs">3 dias restantes</Text>
+        </HStack>
 
         <ActionButtons />
       </VStack>

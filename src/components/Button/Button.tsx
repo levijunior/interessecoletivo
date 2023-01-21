@@ -17,7 +17,7 @@ export function Button({ title, variant = 'solid', isFull, ...rest }: Props) {
       rounded="sm"
       _pressed={{
         bg: variant === 'outline' ? 'white' : 'orange.100',
-        opacity: variant === 'outline' ? '0.7' : '1',
+        opacity: variant === 'outline' ? 70 : 100,
       }}
       {...rest}
     >
